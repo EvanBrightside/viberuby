@@ -60,14 +60,12 @@ end
 
 Start application
 
-Execute:
 ```ruby
 $ rails s
 ```
 
 Setting a webhook just ones
 
-Execute:
 ```
 $ curl -d '{"url":"https://localhost:3000/viberadapter"}' -H "X-Viber-Auth-Token: VIBER_API_TOKEN" -X POST https://chatapi.viber.com/pa/set_webhook
 ```
@@ -80,7 +78,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/viberuby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/EvanBrightside/viberuby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
