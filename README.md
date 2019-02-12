@@ -18,13 +18,13 @@ Or install it yourself as:
 
 ## Usage in rails app
 
-```
+```ruby
 #routes.rb
 
 post 'viberadapter', to: 'viber_adapter#events'
 ```
 
-```
+```ruby
 #viber_adapter_controller.rb
 
 class ViberAdapterController < ApplicationController
@@ -53,16 +53,24 @@ class ViberAdapterController < ApplicationController
   end
 
   def answer
-    @viber.send_message.(message, user_id)
+    @viber.send_message(user_id, 'Hello')
   end
 end
 ```
 
 Start application
-`rails s`
 
-Setting a webhook
-`curl -d '{"url":"https://localhost:3000/viberadapter"}' -H "X-Viber-Auth-Token: VIBER_API_TOKEN" -X POST https://chatapi.viber.com/pa/set_webhook`
+Execute:
+```ruby
+$ rails s
+```
+
+Setting a webhook just ones
+
+Execute:
+```
+$ curl -d '{"url":"https://localhost:3000/viberadapter"}' -H "X-Viber-Auth-Token: VIBER_API_TOKEN" -X POST https://chatapi.viber.com/pa/set_webhook
+```
 
 ## Development
 
@@ -80,4 +88,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Viberuby project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/viberuby/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Viberuby project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/EvanBrightside/viberuby/blob/master/CODE_OF_CONDUCT.md).
